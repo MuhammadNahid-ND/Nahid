@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>It's me</title>
+  <!-- HTML -->
+  <!-- Bootstrap -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.2/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.2/dist/css/bootstrap.min.css">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="tiltedpage-scroll.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="jquery.tiltedpage-scroll.js"></script>
+  <link rel="stylesheet" href="tiltedpage-scroll.css">
+  <style>
+    :root {
+      --primary: #3DCFD3;
+      /*  --primary: #FF8800;*/
+      --dark: #161616;
+      --pure: #FFFFFF;
+      --ternary: #898989;
+      --light: #F2F2F2;
+    }
+
+    header {
+      position: absolute;
+      height: 320px;
+      top: 0px;
+      left: 0px;
+      background-color: var(--dark);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
+      width: 100%;
+      max-width: 480px;
+      display: flex;
+      color: var(--pure);
+      justify-content: space-between;
+      margin: 0 auto;
+    }
+
+    header ul li {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    header img {
+      position: absolute;
+      height: 280px;
+      margin: auto auto;
+      bottom: 0px;
+      margin: 0 auto;
+      padding: 0 auto;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      max-width: 500px;
+    }
+
+    .heading {
+      position: absolute;
+      width: 50%;
+      margin: auto auto;
+      right: 3%;
+      bottom: 11%;
+    }
+
+    .heading h2 {
+      font-size: 12pt;
+      color: var(--pure);
+      transition: all .3s;
+      font-family: 'Righteous', cursive;
+      position: relative;
+      text-transform: uppercase;
+
+    }
+
+    .heading h2::before {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: var(--primary);
+      overflow: hidden;
+      text-transform: uppercase;
+      border-right: .8px solid var(--primary);
+      animation: animate 3s ease infinite;
+
+    }
+
+    @keyframes animate {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        width: 100%;
+      }
+    }
+
+    .heading h1 {
+      font-size: 15pt;
+      font-family: 'Reggae One', cursive;
+    }
+
+    .heading h1 span {
+      color: var(--primary)
+    }
+
+    .heading p {
+      font-size: 9pt;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .hero .pic {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      float: left;
+      background: url(male-4.jpg);
+      background-size: 100px 100px;
+      shape-outside: circle();
+      margin: 30px 10px;
+
+    }
+
+    .text-hero h2 {
+      font-size: 12pt;
+      text-align: center;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .text-hero h2 span {
+      color: var(--primary);
+    }
+
+    .text-hero h1 {
+      font-size: 10.5pt;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .text-hero p {
+      font-size: 9pt;
+      align-items: justify;
+      padding-left: 25px;
+
+    }
+
+    .hero {
+      margin-top: 10px;
+      margin: 0 auto;
+    }
+
+    .heading button {
+      border: .4px solid var(--primary);
+      padding: 10px auto;
+      background: transparent;
+      font-size: 10pt;
+      font-family: 'Oswald', sans-serif;
+      color: var(--primary);
+      letter-spacing: 1px;
+      height: 40px;
+      width: 100px;
+      outline: none;
+      transition: all .4s;
+      margin-bottom:1rem;
+    }
+
+    .heading button:hover {
+      background: var(--primary);
+      color: var(--pure);
+    }
+
+    .menu img {
+      height: 25px;
+      z-index: 200;
+    }
+
+    .menu {
+      z-index: 200;
+
+      top: 22px;
+      right: 22px;
+      position: fixed;
+      background: transparent;
+      outline: none;
+      border: none;
+    }
+
+    .menu button {
+      background: transparent;
+      outline: none !important;
+      border: none !important;
+    }
+
+    .close img {
+      height: 30px;
+    }
+
+    .close {
+      top: 25px;
+      right: 25px;
+      position: absolute;
+      background: transparent;
+      outline: none;
+      border: none;
+      z-index: 200;
+      opacity: 2;
+
+    }
+
+    .close button {
+      background: transparent;
+      outline: none;
+      border: none;
+    }
+
+    .menu-page {
+      position: fixed;
+      z-index: 200;
+
+      width: 70%;
+      height: 110%;
+      top: 0px;
+      left: 0px;
+      background: black;
+      color: white;
+      transform: translateX(-100%);
+      opacity: 0;
+      transition: all .7s;
+    }
+
+    .open {
+      transform: translateX(00%);
+      opacity: 1;
+    }
+
+    .menu-page ul {
+      margin-top: 80px;
+    }
+
+    .menu-page ul li {
+      list-style: none;
+      margin-top: 40px;
+      width: 200px;
+      height: 40px;
+      color: white;
+      border-radius: 7px;
+      background: transparent;
+      transition: all .5s;
+      font-size: 10pt;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .menu-page ul li a {
+      position: absolute;
+      text-decoration: none;
+      margin-left: 50px;
+      margin-top: 10px;
+      color: #00F6FF;
+    }
+
+    .menu-page ul li:hover {
+      background: #00F6FF;
+    }
+
+    .menu-page ul li:hover a {
+      color: white;
+    }
+
+
+    .about {
+      margin: 0 auto;
+      margin-top: 400px;
+      display: flex;
+      justify-content: space-between;
+      width: 95%;
+      max-width: 460px;
+      border: .7px solid #A1A1A1;
+      border-radius: 5px;
+      max-width: 600px;
+    }
+
+    .about h1 {
+      font-size: 1.5rem;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .about h1 span {
+      color: var(--primary);
+    }
+
+    .about h3 {
+      font-size: 1rem;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .about p {
+      color: #A1A1A1;
+      font-size: 8pt;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    /* .container{
+   position:relative;
+   width:200px;
+justify-content:center;
+margin:auto 0;
+ }*/
+    .container {
+      padding: 0 4px;
+    }
+
+    .image {
+      position: relative;
+      height: 130px;
+      width: 130px;
+      float: left;
+      background: url(PSX_20210409_113732~2.jpg);
+      justify-content: center;
+      margin: 14px;
+      margin-top: 18px;
+      border-radius: 50%;
+      background-size: 150px 150px;
+      shape-outside: circle();
+    }
+
+    .icons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      transition: all .4s ease;
+    }
+
+    .icons .fa {
+      margin: 5px auto;
+      background-color: var(--dark);
+      padding: 10px 11px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all .4s ease;
+    }
+
+    .icons .fa:hover {
+      background-color: var(--primary);
+    }
+
+    .icons .fa-facebook {
+      padding: 10px 14px;
+    }
+
+    span {
+      color: var(--primary);
+    }
+
+    .service {
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .service h1 {
+      font-size: 15pt;
+      text-align: center;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .service p {
+      font-size: 11pt;
+      color: #898989;
+      font-family: 'Akaya Kanadaka', sans-serif;
+      text-align: center;
+    }
+
+    .card img {
+      position: relative;
+      width: 50px;
+      max-width: 80px;
+      margin: 5px auto;
+      margin-top: -25%;
+      margin-left: 25%;
+      margin-bottom: 10px;
+    }
+
+    .card h2 {
+      font-size: 9pt;
+      text-align: center;
+      font-family: 'Akaya Kanadaka', sans-serif;
+      margin-top: -8%;
+    }
+
+    .card p {
+      font-size: 7pt;
+      font-family: 'Akaya Kanadaka', sans-serif;
+      text-align: center;
+    }
+
+    .card {
+      border: none;
+      border-radius: 0;
+      width: 100px;
+
+      height: 110px;
+      max-width: 200px;
+      margin: 20px auto;
+      transition: all .8s ease;
+    }
+
+    .card:hover {
+      color: white;
+      background: var(--dark);
+    }
+
+    .card:hover .card p {
+      color: white;
+    }
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 390px;
+      margin: 0 auto;
+
+    }
+
+    .freelancer {
+      position: absolute;
+      height: 180px;
+      width: 100%;
+      max-width: 460px;
+      background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.7)), url(camera.png);
+      background-size: 100% 200px;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 83%, 0 100%);
+      margin-top: 70px;
+
+    }
+
+    .freelancer h1 {
+      font-size: 14pt;
+      text-align: center;
+      padding-top: 2.2rem;
+      color: var(--pure);
+      font-family: 'Akaya Kanadaka', sans-serif;
+      margin-top: -3%;
+
+    }
+
+    .freelancer p {
+      font-size: 10pt;
+      text-align: center;
+      color: var(--pure);
+      font-family: 'Akaya Kanadaka', sans-serif;
+
+
+    }
+
+    .freelancer button {
+      border: .4px solid var(--primary);
+
+      background: var(--primary);
+      font-size: 10pt;
+      color: white;
+      height: 40px;
+      width: 40%;
+      outline: none;
+      transition: all .4s;
+      position: absolute;
+      letter-spacing: 1px;
+      margin-left: 30%;
+      margin-top: 2%;
+
+      margin-bottom: 2rem;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .freelancer button:hover {
+      border: .4px solid var(--primary);
+      padding: 10px auto;
+      background: transparent;
+      font-size: 10pt;
+      color: var(--primary);
+
+      outline: none;
+      transition: all .4s;
+
+    }
+
+    .works {
+      margin-top: 270px;
+      margin-bottom: 100px;
+    }
+
+    .works h1 {
+      font-size: 16pt;
+      text-align: center;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .works p {
+      font-size: 11pt;
+      text-align: center;
+      color: #878787;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .imgs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 8px;
+      margin: 0 auto;
+      width: 360px;
+    }
+
+    .imgs img {
+      border: none;
+      border-radius: 0;
+      width: 110px;
+      height: 90px;
+      max-width: 200px;
+
+
+      transition: all .8s ease;
+
+    }
+
+    .imgs .cards {
+      position: relative;
+    }
+
+    .imgs .cards .overlay span {
+      font-size: 10pt;
+      color: var(--secondary);
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .imgs .cards .overlay a {
+      font-size: 9pt;
+      color: white;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .imgs .cards .overlay {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #00BBE6E8;
+      flex-direction: column;
+      opacity: 0;
+      transition: all .5s ease;
+    }
+
+    .imgs .cards:hover .overlay {
+      opacity: 1;
+    }
+
+    .blog {
+      background: var(--dark);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 90%, 0 100%);
+      margin: 0px auto;
+      margin-top: 50px;
+    }
+
+    .blog .blog1 img {
+      height: 100px;
+      width: 115px;
+      margin: 0px auto;
+    }
+
+    .blog .blog1 {
+      background: var(--pure);
+      width: 150px;
+      margin: 0 auto;
+    }
+
+    .blog .content1 {
+      left: 5px;
+    }
+
+    .blog .content1 h3 {
+      font-size: 10pt;
+    }
+
+    .blog .content1 span {
+      color: var(--secodary);
+      font-size: 8pt;
+    }
+
+    .blog .content1 p {
+      font-size: 7pt;
+    }
+
+    .blog .content1 a {
+      font-size: 7pt;
+      text-decoration: none;
+      color: var(--secondary);
+      padding-top: -40px;
+    }
+
+    .input-tract {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .input-tract .img {
+      margin: 0 auto;
+    }
+
+    .input-tract .img img {
+      height: 80px;
+    }
+
+    .input-tract .img h3 {
+      font-size: 14pt;
+      text-align: center;
+      font-weight: 1;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .input-tract .img h6 {
+      font-size: 9pt;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .input-head h2 {
+      text-align: center;
+      font-size: 17pt;
+      margin: 0 auto;
+      margin-top: 40px;
+      font-weight: 2;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .input-head p {
+      text-align: center;
+      color: var(--secondary);
+      font-size: 12pt;
+      margin: 0 auto;
+      font-weight: 1;
+      font-family: 'Akaya Kanadaka', sans-serif;
+    }
+
+    .input-1 {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+
+    .input-1 input {
+      width: 45%;
+      font-size: 8pt;
+      color: var(--secondary);
+
+      margin: 0px auto;
+      height: 30px;
+      border: .7px solid var(--secondary);
+      border-radius: 3px;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .input-1 input:focus {
+      outline: none;
+    }
+
+    .input-2 input {
+      color: var(--secondary);
+      width: 90%;
+      border: .7px solid var(--secondary);
+      font-size: 9pt;
+      height: 30px;
+      border-radius: 3px;
+      margin-left: 10px;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .input-2 textarea {
+      margin-top: 30px;
+      width: 90%;
+      border: .7px solid var(--secondary);
+      font-size: 9pt;
+      height: 130px;
+      border-radius: 3px;
+      margin-left: 10px;
+      color: var(--secondary);
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .input-2 input:focus {
+      outline: none;
+    }
+
+    .input-2 textarea:focus {
+      outline: none;
+    }
+
+    .input-2 button {
+      height: 40px;
+      width: 40%;
+      background: var(--primary);
+      font-size: 10pt;
+      color: var(--pure);
+      margin: 10px auto;
+      justify-content: center;
+      align-content: center;
+      border: none;
+      outline: none;
+      margin-left: 30%;
+      border-radius: 3px;
+      transition: all .6s ease;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .input-2 button:hover {
+      background: transparent;
+      color: var(--primary);
+
+      border: 2px solid var(--primary);
+    }
+
+    .footer {
+      background: var(--dark);
+      margin-top: 50px;
+      clip-path: polygon(0 0, 70% 10%, 100% 0, 100% 100%, 70% 90%, 0 100%);
+    }
+
+    .footer h2 {
+      color: var(--pure);
+      font-weight: 2;
+      font-size: 17pt;
+    }
+
+    .footer .adver {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      padding: 0px 10px;
+      padding-top: 35px;
+      font-family: cursive;
+    }
+
+    .footer .adver img {
+      height: 90px;
+
+    }
+
+    .icon {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      margin-top: 40px;
+      transition: all .4s ease;
+      width: 80%;
+    }
+
+    .icon .fa {
+      margin: 5px auto;
+      background-color: var(--dark);
+      padding: 10px 11px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      transition: all .4s ease;
+    }
+
+    .icon .fa:hover {
+      background-color: var(--primary);
+    }
+
+    .icon .fa-facebook {
+      padding: 10px 14px;
+    }
+
+    .footer p {
+      text-align: center;
+      color: var(--secondary);
+      font-size: 10pt;
+      padding: 25px 0;
+      padding-bottom: 3rem;
+      font-family: 'Oswald', sans-serif;
+    }
+
+    .cloose {
+      transform: translateX(-100%);
+    }
+
+    .button {
+      display: flex;
+      background: var(--dark);
+    }
+
+    .button h4 {
+      color: var(--pure);
+      font-size: 12pt;
+      margin: 0 auto;
+    }
+
+    .button button {
+      background: ;
+      border: none;
+      outline: none;
+
+      right: 100px;
+    }
+
+    body {
+      width: 100%;
+      max-width: 500px;
+      position: absolute;
+      justify-items: center;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
+      margin: 0px auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .full {
+      position: absolute;
+      display: inline;
+    }
+
+    @media(min-width:400px) {
+      body {
+        margin-left: 27%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--   #3dcfd3      -->
+  <div class="full" id="full">
+    <div class="mobile-menu" id="moblie-menu">
+      <button class="menu"><img src="menu.svg" alt=""></button>
+      <div class="menu-page">
+        <button class="close"><img src="cancel.png" alt=""></button>
+        <ul>
+          <li><a href="#home" id="a">HOME</a></li>
+          <li><a href="#about" id="a">ABOUT ME</a></li>
+          <li><a href="#service" id="a">SERVICES</a></li>
+          <li><a href="#work" id="a">WORKS</a></li>
+          <li><a href="#contact" id="a">CONTACT</a></li>
+          <li><a href="#footer" id="a">SOCIAL ACCOUNTS</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="main" class="main">
+    <header id="home">
+      <img class="" src="man.png" alt="" />
+      <div class="heading">
+        <h2 data-text="Nahid Hassan..">Nahid Hassan..</h2>
+        <h1>Iam a creative <span>Developer</span></h1>
+        <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora quisquam numquam, expedita magnam!</p>
+        <button>Download CV</button>
+      </div>
+    </header>
+    <section class="about" id="about">
+      <div class="container">
+        <div class="image"></div>
+        <h1>About <span>Me</span></h1>
+        <h3>Hello ! I'm Nahid</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing. ncidunt tenetur praesentium exercitationem spun ventore Lorem ipsum dolor sit. Lorem ipsum dolor sit amet, consectetur adipisicing Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit, eligendi.</p>
+        <div class="icons">
+          <!-- Add icon library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <!-- Add font awesome icons -->
+          <a href="https://www.facebook.com/nahid.mustakim.54" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="https://instagram.com/nahidmustakim?igshid=k0d3cuwdt0t7" class="fa fa-instagram"></a> <a href="#" class="fa fa-youtube"></a> <a href="#" class="fa fa-google"></a>
+        </div>
+      </div>
+    </section>
+    <section id="service" class="service">
+      <h1><span>Our </span>Services</h1>
+      <p>We provide high standard clean website for your business solutions.</p>
+      <div class="wrapper">
+        <div class="card">
+          <img src="brush.svg" alt="">
+          <h2>Graphics Design</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+        <div class="card">
+          <img src="code.svg" alt="">
+          <h2>Web Development</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+        <div class="card">
+          <img src="bag.svg" alt="">
+          <h2>Media Marketing</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+        <div class="card">
+          <img src="desktop.svg" alt="">
+          <h2>Web Design</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+        <div class="card">
+          <img src="media.svg" alt="">
+          <h2>Motion Graphic</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+        <div class="card">
+          <img src="phone.svg" alt="">
+          <h2>App Development</h2>
+          <p>There are many variations of passages but the majority have suffered alteration in some form.</p>
+        </div>
+      </div>
+    </section>
+    <section class="freelancer">
+      <h1>I Am Available For Freelancer</h1>
+      <p>We provide high standard clean website for your business solutions.</p>
+      <button>Download CV</button>
+    </section>
+    <section class="works" id="work">
+      <h1><span>Our</span> Works</h1>
+      <p>We provide high standard clean website for your business solutions.
+      </p>
+      <div class="imgs">
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">Web Development</a>
+          </div>
+          <img src="ph-1.png" alt="">
+        </div>
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">App Development</a>
+          </div>
+          <img src="ph-2.png" alt="">
+        </div>
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">Web Development</a>
+          </div>
+          <img src="ph-3.png" alt="">
+        </div>
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">App Development</a>
+          </div>
+          <img src="ph-2.png" alt="">
+        </div>
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">Web Development</a>
+          </div>
+          <img src="ph-3.png" alt="">
+        </div>
+        <div class="cards">
+          <div class="overlay">
+            <span>Category</span>
+            <a href="">App Development</a>
+          </div>
+          <img src="ph-1.png" alt="">
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="input-head">
+        <h2>Contact <span>Us</span></h2>
+        <p>We provide high standard clean website for your business solutions.
+        </p>
+      </div>
+      <div class="input-tract">
+        <div class="img">
+          <img src="smartphone.svg" alt="">
+          <h3>Call Us On</h3>
+          <h6>+036 737 366</h6>
+        </div>
+        <div class="img">
+          <img src="mail.svg" alt="">
+          <h3>Email Us At</h3>
+          <h6>nahid@gmail.com</h6>
+        </div>
+        <div class="img">
+          <img src="map.svg" alt="">
+          <h3>Visit Us At</h3>
+          <h6>28Paltan,Dhaka</h6>
+        </div>
+      </div>
+      <form action="">
+        <div class="input-1">
+          <input type="text" placeholder="    Your Name *">
+          <input type="email" placeholder="    Your Email *" name="" id="">
+        </div>
+        <div class="input-2">
+          <input type="text" placeholder=" Your Subject...">
+          <textarea name="" placeholder=" Your Message..." id=rows="8" cols="40"></textarea>
+          <button>SEND MESSAGE</button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <div class="footer" id="footer">
+        <div class="adver">
+          <!-- <img src="settings.png" alt="">
+        <h2>FOOTER</h2>-->
+          <!-- <img src="logo.svg" alt="">-->
+          <img src="logo.png" alt="">
+        </div>
+        <div class="icon">
+          <!-- Add icon library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <!-- Add font awesome icons -->
+          <a href="https://www.facebook.com/nahid.mustakim.54" class="fa fa-facebook"></a>
+          <a href="#" class="fa fa-github"></a>
+          <a href="#" class="fa fa-twitter"></a>
+          <a href="https://instagram.com/nahidmustakim?igshid=k0d3cuwdt0t7" class="fa fa-instagram"></a>
+          <a href="#" class="fa fa-youtube"></a>
+          <a href="#" class="fa fa-google"></a>
+        </div>
+        <p>Copyright 2021 © Creative.All Right Reserved.</p>
+      </div>
+    </section>
+  </div>
+  <script>
+    $(".main").tiltedpage_scroll({
+      sectionContainer: "> section",
+      angle: 50,
+      opacity: true,
+      scale: true,
+      outAnimation: true
+    });
+  </script>
+  <script type="text/javascript" charset="utf-8">
+    $('#a').click(function() {
+      $('#mobile-menu').slideUp(1000);
+    })
+  </script>
+  <!-- <script>
+    $(document).ready(function(){
+      $('#a').click(function(){
+        $('.menu-page').animate({
+          opacity:0;
+          transform:translateX(-100%);
+        },700);
+      });
+    });
+    
+  </script>-->
+  <script>
+    let menu = document.querySelector('.menu');
+    let close = document.querySelector('.close');
+    let page = document.querySelector('.menu-page');
+    let a = document.querySelector('#a');
+    menu.addEventListener('click', function() {
+      page.classList.add('open');
+    })
+    close.addEventListener('click', function() {
+      page.classList.remove('open');
+    })
+    a.addEventListener('click', function() {
+      page.classList.remove('open');
+    })
+  </script>
+</body>
+
+</html>
